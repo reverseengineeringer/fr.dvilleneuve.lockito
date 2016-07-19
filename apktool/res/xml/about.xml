@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference android:title="@string/prefs_about_version_title" android:selectable="false" android:key="pref_version" android:summary="@string/prefs_about_version_summary" />
+    <Preference android:title="@string/prefs_about_developer_title" android:key="pref_developer" android:summary="@string/prefs_about_developer_summary">
+        <intent android:action="android.intent.action.VIEW" android:data="@string/prefs_about_developer_data" />
+    </Preference>
+    <Preference android:title="@string/prefs_about_changelogs_title" android:key="pref_changelogs" android:summary="@string/prefs_about_changelogs_summary">
+        <intent android:targetPackage="fr.dvilleneuve.lockito" android:action="android.intent.action.MAIN" android:targetClass="fr.dvilleneuve.lockito.ui.ChangelogActivity_" />
+    </Preference>
+    <Preference android:title="@string/prefs_about_licenses_title" android:key="pref_licenses" android:summary="@string/prefs_about_licenses_summary">
+        <intent android:targetPackage="fr.dvilleneuve.lockito" android:action="android.intent.action.MAIN" android:targetClass="fr.dvilleneuve.lockito.ui.LicenseActivity_" />
+    </Preference>
+    <PreferenceCategory android:title="@string/prefs_about_likeTheApp">
+        <Preference android:title="@string/prefs_about_sendFeedback_title" android:key="pref_sendFeedback" android:summary="@string/prefs_about_sendFeedback_summary">
+            <intent android:action="android.intent.action.VIEW" android:data="@string/prefs_about_sendFeedback_data" />
+        </Preference>
+        <Preference android:title="@string/prefs_about_followOnTwitter_title" android:key="pref_followOnTwitter" android:summary="@string/prefs_about_followOnTwitter_summary">
+            <intent android:action="android.intent.action.VIEW" android:data="@string/prefs_about_followOnTwitter_data" />
+        </Preference>
+        <Preference android:title="@string/prefs_about_rateApplication_title" android:key="pref_rateApplication" android:summary="@string/prefs_about_rateApplication_summary">
+            <intent android:action="android.intent.action.VIEW" android:data="@string/prefs_about_rateApplication_data" />
+        </Preference>
+    </PreferenceCategory>
+</PreferenceScreen>

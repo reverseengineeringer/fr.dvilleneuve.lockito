@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources tools:ignore="TypographyDashes" xmlns:tools="https://schemas.android.com/tools">
+    <string name="ga_trackingId">UA-16707679-3</string>
+    <bool name="ga_reportUncaughtExceptions">false</bool>
+    <bool name="ga_autoActivityTracking">true</bool>
+    <string name="fr.dvilleneuve.lockito.ui.ImportActivity_">Import</string>
+    <string name="fr.dvilleneuve.lockito.ui.ItinerariesActivity_">Itineraries list</string>
+    <string name="fr.dvilleneuve.lockito.ui.ItineraryActivity_">Itinerary</string>
+    <string name="fr.dvilleneuve.lockito.ui.SettingsActivity_">Settings</string>
+    <string name="fr.dvilleneuve.lockito.ui.AboutActivity_">About</string>
+    <string name="fr.dvilleneuve.lockito.ui.ChangelogActivity_">Changelog</string>
+</resources>

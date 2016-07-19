@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/message" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/dialog_itineraryName_message" android:layout_alignParentTop="true" />
+    <EditText android:id="@id/nameEditText" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/dialog_itineraryName_hint" android:layout_below="@id/message" android:inputType="textCapSentences" android:imeOptions="actionDone">
+        <requestFocus />
+    </EditText>
+</RelativeLayout>

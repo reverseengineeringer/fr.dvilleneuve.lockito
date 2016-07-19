@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:left="@dimen/itineraries_itemBox_padding" android:top="@dimen/itineraries_itemBox_padding" android:right="@dimen/itineraries_itemBox_padding" android:bottom="@dimen/itineraries_itemBox_paddingBottom_shadow">
+        <shape android:dither="true" android:shape="rectangle">
+            <corners android:radius="2.0dip" />
+            <solid android:color="@color/itineraries_item_border" />
+        </shape>
+    </item>
+    <item android:left="@dimen/itineraries_itemBox_padding" android:top="@dimen/itineraries_itemBox_padding" android:right="@dimen/itineraries_itemBox_padding" android:bottom="@dimen/itineraries_itemBox_paddingBottom">
+        <shape android:dither="true" android:shape="rectangle">
+            <corners android:radius="2.0dip" />
+            <solid android:color="@color/itineraries_item_background_pressed" />
+        </shape>
+    </item>
+</layer-list>

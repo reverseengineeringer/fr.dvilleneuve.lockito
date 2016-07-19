@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/xpathNameLabel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/activity_import_xpath_name_label" />
+    <EditText android:id="@id/xpathNameText" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:layout_below="@id/xpathNameLabel" android:inputType="text" />
+    <TextView android:id="@id/xpathDescriptionLabel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/activity_import_xpath_description_label" android:layout_below="@id/xpathNameText" />
+    <EditText android:id="@id/xpathDescriptionText" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:layout_below="@id/xpathDescriptionLabel" android:inputType="text" />
+    <TextView android:id="@id/xpathWaypointsLabel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/activity_import_xpath_waypoints_label" android:layout_below="@id/xpathDescriptionText" />
+    <EditText android:id="@id/xpathWaypointsText" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:layout_below="@id/xpathWaypointsLabel" android:inputType="text" />
+    <TextView android:id="@id/xpathLegsLabel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/activity_import_xpath_legs_label" android:layout_below="@id/xpathWaypointsText" />
+    <EditText android:id="@id/xpathLegsText" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:layout_below="@id/xpathLegsLabel" android:inputType="text" />
+    <TextView android:id="@id/xpathPointsLabel" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/activity_import_xpath_points_label" android:layout_below="@id/xpathLegsText" />
+    <EditText android:id="@id/xpathPointsText" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:layout_below="@id/xpathPointsLabel" android:inputType="text" />
+</RelativeLayout>

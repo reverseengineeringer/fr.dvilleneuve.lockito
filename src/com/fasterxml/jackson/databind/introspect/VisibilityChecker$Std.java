@@ -1,0 +1,231 @@
+package com.fasterxml.jackson.databind.introspect;
+
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
+import com.fasterxml.jackson.annotation.PropertyAccessor;
+import java.io.Serializable;
+import java.lang.reflect.Field;
+import java.lang.reflect.Member;
+import java.lang.reflect.Method;
+
+@JsonAutoDetect(creatorVisibility=JsonAutoDetect.Visibility.ANY, fieldVisibility=JsonAutoDetect.Visibility.PUBLIC_ONLY, getterVisibility=JsonAutoDetect.Visibility.PUBLIC_ONLY, isGetterVisibility=JsonAutoDetect.Visibility.PUBLIC_ONLY, setterVisibility=JsonAutoDetect.Visibility.ANY)
+public class VisibilityChecker$Std
+  implements VisibilityChecker<Std>, Serializable
+{
+  protected static final Std DEFAULT = new Std((JsonAutoDetect)Std.class.getAnnotation(JsonAutoDetect.class));
+  private static final long serialVersionUID = -7073939237187922755L;
+  protected final JsonAutoDetect.Visibility _creatorMinLevel;
+  protected final JsonAutoDetect.Visibility _fieldMinLevel;
+  protected final JsonAutoDetect.Visibility _getterMinLevel;
+  protected final JsonAutoDetect.Visibility _isGetterMinLevel;
+  protected final JsonAutoDetect.Visibility _setterMinLevel;
+  
+  public VisibilityChecker$Std(JsonAutoDetect.Visibility paramVisibility)
+  {
+    if (paramVisibility == JsonAutoDetect.Visibility.DEFAULT)
+    {
+      _getterMinLevel = DEFAULT_getterMinLevel;
+      _isGetterMinLevel = DEFAULT_isGetterMinLevel;
+      _setterMinLevel = DEFAULT_setterMinLevel;
+      _creatorMinLevel = DEFAULT_creatorMinLevel;
+      _fieldMinLevel = DEFAULT_fieldMinLevel;
+      return;
+    }
+    _getterMinLevel = paramVisibility;
+    _isGetterMinLevel = paramVisibility;
+    _setterMinLevel = paramVisibility;
+    _creatorMinLevel = paramVisibility;
+    _fieldMinLevel = paramVisibility;
+  }
+  
+  public VisibilityChecker$Std(JsonAutoDetect.Visibility paramVisibility1, JsonAutoDetect.Visibility paramVisibility2, JsonAutoDetect.Visibility paramVisibility3, JsonAutoDetect.Visibility paramVisibility4, JsonAutoDetect.Visibility paramVisibility5)
+  {
+    _getterMinLevel = paramVisibility1;
+    _isGetterMinLevel = paramVisibility2;
+    _setterMinLevel = paramVisibility3;
+    _creatorMinLevel = paramVisibility4;
+    _fieldMinLevel = paramVisibility5;
+  }
+  
+  public VisibilityChecker$Std(JsonAutoDetect paramJsonAutoDetect)
+  {
+    _getterMinLevel = paramJsonAutoDetect.getterVisibility();
+    _isGetterMinLevel = paramJsonAutoDetect.isGetterVisibility();
+    _setterMinLevel = paramJsonAutoDetect.setterVisibility();
+    _creatorMinLevel = paramJsonAutoDetect.creatorVisibility();
+    _fieldMinLevel = paramJsonAutoDetect.fieldVisibility();
+  }
+  
+  public static Std defaultInstance()
+  {
+    return DEFAULT;
+  }
+  
+  public boolean isCreatorVisible(AnnotatedMember paramAnnotatedMember)
+  {
+    return isCreatorVisible(paramAnnotatedMember.getMember());
+  }
+  
+  public boolean isCreatorVisible(Member paramMember)
+  {
+    return _creatorMinLevel.isVisible(paramMember);
+  }
+  
+  public boolean isFieldVisible(AnnotatedField paramAnnotatedField)
+  {
+    return isFieldVisible(paramAnnotatedField.getAnnotated());
+  }
+  
+  public boolean isFieldVisible(Field paramField)
+  {
+    return _fieldMinLevel.isVisible(paramField);
+  }
+  
+  public boolean isGetterVisible(AnnotatedMethod paramAnnotatedMethod)
+  {
+    return isGetterVisible(paramAnnotatedMethod.getAnnotated());
+  }
+  
+  public boolean isGetterVisible(Method paramMethod)
+  {
+    return _getterMinLevel.isVisible(paramMethod);
+  }
+  
+  public boolean isIsGetterVisible(AnnotatedMethod paramAnnotatedMethod)
+  {
+    return isIsGetterVisible(paramAnnotatedMethod.getAnnotated());
+  }
+  
+  public boolean isIsGetterVisible(Method paramMethod)
+  {
+    return _isGetterMinLevel.isVisible(paramMethod);
+  }
+  
+  public boolean isSetterVisible(AnnotatedMethod paramAnnotatedMethod)
+  {
+    return isSetterVisible(paramAnnotatedMethod.getAnnotated());
+  }
+  
+  public boolean isSetterVisible(Method paramMethod)
+  {
+    return _setterMinLevel.isVisible(paramMethod);
+  }
+  
+  public String toString()
+  {
+    return "[Visibility:" + " getter: " + _getterMinLevel + ", isGetter: " + _isGetterMinLevel + ", setter: " + _setterMinLevel + ", creator: " + _creatorMinLevel + ", field: " + _fieldMinLevel + "]";
+  }
+  
+  public Std with(JsonAutoDetect.Visibility paramVisibility)
+  {
+    if (paramVisibility == JsonAutoDetect.Visibility.DEFAULT) {
+      return DEFAULT;
+    }
+    return new Std(paramVisibility);
+  }
+  
+  public Std with(JsonAutoDetect paramJsonAutoDetect)
+  {
+    Std localStd = this;
+    if (paramJsonAutoDetect != null) {
+      localStd = withGetterVisibility(paramJsonAutoDetect.getterVisibility()).withIsGetterVisibility(paramJsonAutoDetect.isGetterVisibility()).withSetterVisibility(paramJsonAutoDetect.setterVisibility()).withCreatorVisibility(paramJsonAutoDetect.creatorVisibility()).withFieldVisibility(paramJsonAutoDetect.fieldVisibility());
+    }
+    return localStd;
+  }
+  
+  public Std withCreatorVisibility(JsonAutoDetect.Visibility paramVisibility)
+  {
+    if (paramVisibility == JsonAutoDetect.Visibility.DEFAULT) {
+      paramVisibility = DEFAULT_creatorMinLevel;
+    }
+    for (;;)
+    {
+      if (_creatorMinLevel == paramVisibility) {
+        return this;
+      }
+      return new Std(_getterMinLevel, _isGetterMinLevel, _setterMinLevel, paramVisibility, _fieldMinLevel);
+    }
+  }
+  
+  public Std withFieldVisibility(JsonAutoDetect.Visibility paramVisibility)
+  {
+    if (paramVisibility == JsonAutoDetect.Visibility.DEFAULT) {
+      paramVisibility = DEFAULT_fieldMinLevel;
+    }
+    for (;;)
+    {
+      if (_fieldMinLevel == paramVisibility) {
+        return this;
+      }
+      return new Std(_getterMinLevel, _isGetterMinLevel, _setterMinLevel, _creatorMinLevel, paramVisibility);
+    }
+  }
+  
+  public Std withGetterVisibility(JsonAutoDetect.Visibility paramVisibility)
+  {
+    if (paramVisibility == JsonAutoDetect.Visibility.DEFAULT) {
+      paramVisibility = DEFAULT_getterMinLevel;
+    }
+    for (;;)
+    {
+      if (_getterMinLevel == paramVisibility) {
+        return this;
+      }
+      return new Std(paramVisibility, _isGetterMinLevel, _setterMinLevel, _creatorMinLevel, _fieldMinLevel);
+    }
+  }
+  
+  public Std withIsGetterVisibility(JsonAutoDetect.Visibility paramVisibility)
+  {
+    if (paramVisibility == JsonAutoDetect.Visibility.DEFAULT) {
+      paramVisibility = DEFAULT_isGetterMinLevel;
+    }
+    for (;;)
+    {
+      if (_isGetterMinLevel == paramVisibility) {
+        return this;
+      }
+      return new Std(_getterMinLevel, paramVisibility, _setterMinLevel, _creatorMinLevel, _fieldMinLevel);
+    }
+  }
+  
+  public Std withSetterVisibility(JsonAutoDetect.Visibility paramVisibility)
+  {
+    if (paramVisibility == JsonAutoDetect.Visibility.DEFAULT) {
+      paramVisibility = DEFAULT_setterMinLevel;
+    }
+    for (;;)
+    {
+      if (_setterMinLevel == paramVisibility) {
+        return this;
+      }
+      return new Std(_getterMinLevel, _isGetterMinLevel, paramVisibility, _creatorMinLevel, _fieldMinLevel);
+    }
+  }
+  
+  public Std withVisibility(PropertyAccessor paramPropertyAccessor, JsonAutoDetect.Visibility paramVisibility)
+  {
+    switch (VisibilityChecker.1.$SwitchMap$com$fasterxml$jackson$annotation$PropertyAccessor[paramPropertyAccessor.ordinal()])
+    {
+    default: 
+      return this;
+    case 1: 
+      return withGetterVisibility(paramVisibility);
+    case 2: 
+      return withSetterVisibility(paramVisibility);
+    case 3: 
+      return withCreatorVisibility(paramVisibility);
+    case 4: 
+      return withFieldVisibility(paramVisibility);
+    case 5: 
+      return withIsGetterVisibility(paramVisibility);
+    }
+    return with(paramVisibility);
+  }
+}
+
+/* Location:
+ * Qualified Name:     com.fasterxml.jackson.databind.introspect.VisibilityChecker.Std
+ * Java Class Version: 6 (50.0)
+ * JD-Core Version:    0.7.1
+ */

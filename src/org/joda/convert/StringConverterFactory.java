@@ -1,0 +1,12 @@
+package org.joda.convert;
+
+public abstract interface StringConverterFactory
+{
+  public abstract StringConverter<?> findConverter(Class<?> paramClass);
+}
+
+/* Location:
+ * Qualified Name:     org.joda.convert.StringConverterFactory
+ * Java Class Version: 6 (50.0)
+ * JD-Core Version:    0.7.1
+ */

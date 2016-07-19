@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="fr.dvilleneuve.lockito" platformBuildVersionCode="24" platformBuildVersionName="N">
+    <permission android:name="fr.dvilleneuve.lockito.permission.MAPS_RECEIVE" android:protectionLevel="signature"/>
+    <uses-feature android:glEsVersion="0x20000" android:required="true"/>
+    <uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
+    <uses-permission android:name="fr.dvilleneuve.lockito.permission.MAPS_RECEIVE"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <permission android:name="fr.dvilleneuve.lockito.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="fr.dvilleneuve.lockito.permission.C2D_MESSAGE"/>
+    <application android:allowBackup="true" android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:name="fr.dvilleneuve.lockito.LockitoApplication_" android:theme="@style/Theme.Lockito">
+        <activity android:label="@string/activity_main_label" android:name="fr.dvilleneuve.lockito.ui.SplashscreenActivity_" android:theme="@style/Theme.Lockito.Splashscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:launchMode="singleTop" android:name="fr.dvilleneuve.lockito.ui.ItinerariesActivity_" android:theme="@style/Theme.Lockito"/>
+        <activity android:name="fr.dvilleneuve.lockito.ui.ItineraryActivity_" android:theme="@style/Theme.Lockito"/>
+        <activity android:label="@string/activity_settings_title" android:name="fr.dvilleneuve.lockito.ui.SettingsActivity_" android:theme="@style/Theme.Lockito"/>
+        <activity android:label="@string/activity_about_title" android:name="fr.dvilleneuve.lockito.ui.AboutActivity_" android:theme="@style/Theme.Lockito"/>
+        <activity android:label="@string/activity_changelog_title" android:name="fr.dvilleneuve.lockito.ui.ChangelogActivity_" android:theme="@style/Theme.Lockito"/>
+        <activity android:label="@string/activity_licenses_title" android:name="fr.dvilleneuve.lockito.ui.LicenseActivity_" android:theme="@style/Theme.Lockito"/>
+        <activity android:label="@string/activity_selectFile_title" android:name="fr.dvilleneuve.lockito.ui.SelectFileActivity_" android:theme="@style/Theme.Lockito"/>
+        <activity android:name="fr.dvilleneuve.lockito.ui.ImportActivity_" android:theme="@style/Theme.Lockito">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="application/vnd.google-earth.kml+xml"/>
+                <data android:mimeType="application/gpx+xml"/>
+                <data android:mimeType="application/xml"/>
+                <data android:mimeType="text/xml"/>
+                <data android:host="*" android:mimeType="text/plain" android:pathPattern=".*\\.gpx"/>
+                <data android:host="*" android:mimeType="text/plain" android:pathPattern=".*\\.kml"/>
+            </intent-filter>
+        </activity>
+        <receiver android:exported="true" android:name="fr.dvilleneuve.lockito.core.service.SimulationActionReceiver"/>
+        <service android:name="fr.dvilleneuve.lockito.core.service.SimulationActionService_"/>
+        <service android:icon="@drawable/ic_launcher" android:label="test" android:name="fr.dvilleneuve.lockito.core.service.SimulationService_"/>
+        <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyAK2fMQQE5b8n-GU43Aihx0XGmzKWRQc1E"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <meta-data android:name="com.crashlytics.ApiKey" android:value="9240d7600690be8e3f0e1b78192f8f10199069db"/>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:style/Theme.Translucent"/>
+        <activity android:name="com.google.android.gms.ads.purchase.InAppPurchaseActivity" android:theme="@style/Theme.IAPTheme"/>
+        <receiver android:enabled="true" android:name="com.google.android.gms.measurement.AppMeasurementReceiver">
+            <intent-filter>
+                <action android:name="com.google.android.gms.measurement.UPLOAD"/>
+            </intent-filter>
+        </receiver>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.measurement.AppMeasurementService"/>
+        <provider android:authorities="fr.dvilleneuve.lockito.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider"/>
+        <receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+                <category android:name="fr.dvilleneuve.lockito"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:exported="false" android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver"/>
+        <service android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdService">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+    </application>
+</manifest>

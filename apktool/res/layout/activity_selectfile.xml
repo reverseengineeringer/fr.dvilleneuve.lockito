@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/background_color" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/currentFolderText" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/activity_selectFiles_currentFolder" android:singleLine="false" android:layout_alignParentTop="true" />
+    <ListView android:id="@id/filesList" android:layout_width="fill_parent" android:layout_height="fill_parent" android:choiceMode="singleChoice" android:layout_below="@id/currentFolderText" />
+    <TextView android:textSize="18.0sp" android:gravity="center" android:id="@id/emptyView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/activity_selectFiles_emptyList_message" android:layout_below="@id/currentFolderText" />
+</RelativeLayout>

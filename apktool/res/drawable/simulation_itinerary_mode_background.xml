@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@color/map_button_background" />
+    <stroke android:width="@dimen/map_button_border_width" android:color="@color/map_button_border" />
+    <corners android:radius="@dimen/map_button_border_radius" />
+</shape>

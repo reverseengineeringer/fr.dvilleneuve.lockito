@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/layout_details_background" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/addressesLayout" android:background="@drawable/legs_joint_left" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/config_margin" android:layout_marginRight="@dimen/config_margin">
+        <RelativeLayout android:id="@id/fromLayout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/fromImage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/config_margin" android:layout_marginRight="@dimen/config_margin" android:src="@drawable/waypoint" android:layout_centerVertical="true" />
+            <fr.dvilleneuve.lockito.ui.component.AddressEditText_ android:id="@id/fromEditText" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/fromImage" style="@style/addressText" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/toLayout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/fromLayout">
+            <ImageView android:id="@id/toImage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/config_margin" android:layout_marginRight="@dimen/config_margin" android:src="@drawable/waypoint" android:layout_centerVertical="true" />
+            <fr.dvilleneuve.lockito.ui.component.AddressEditText_ android:id="@id/toEditText" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/toImage" style="@style/addressText" />
+        </RelativeLayout>
+        <View android:background="#ffcccccc" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_below="@id/toLayout" />
+    </RelativeLayout>
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/addressesLayout" layout="@layout/component_detail_itinerary" />
+</RelativeLayout>

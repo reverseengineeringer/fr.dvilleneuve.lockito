@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="prefs_general_unitSystem_entries">
+        <item>Système metrique (m et km/h)</item>
+        <item>Système impérial (mi et mph)</item>
+    </string-array>
+    <string-array name="prefs_itineraries_order_entries">
+        <item>Dernier créé en premier</item>
+        <item>Dernier modifié en premier</item>
+        <item>Plus souvent joué en premier</item>
+    </string-array>
+</resources>

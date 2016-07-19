@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:lockito="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@android:drawable/ic_menu_save" android:enabled="false" android:id="@id/menuSave" android:title="@string/action_save" lockito:showAsAction="always" />
+    <item android:icon="@android:drawable/ic_menu_crop" android:enabled="false" android:id="@id/menuCenter" android:title="@string/action_center" lockito:showAsAction="ifRoom" />
+    <item android:icon="@android:drawable/ic_menu_edit" android:enabled="false" android:id="@id/menuRename" android:title="@string/action_rename" lockito:showAsAction="ifRoom" />
+    <item android:icon="@android:drawable/ic_menu_upload" android:enabled="false" android:id="@id/menuExport" android:title="@string/action_export" lockito:showAsAction="ifRoom">
+        <menu>
+            <item android:icon="@android:drawable/ic_menu_upload" android:id="@id/menuExportGpx" android:title="@string/action_export_gpx" lockito:showAsAction="ifRoom" />
+            <item android:icon="@android:drawable/ic_menu_upload" android:id="@id/menuExportKml" android:title="@string/action_export_kml" lockito:showAsAction="ifRoom" />
+        </menu>
+    </item>
+    <item android:icon="@android:drawable/ic_menu_close_clear_cancel" android:enabled="false" android:id="@id/menuReset" android:title="@string/action_reset" lockito:showAsAction="never" />
+    <item android:icon="@android:drawable/ic_menu_delete" android:enabled="false" android:id="@id/menuDelete" android:title="@string/action_delete" lockito:showAsAction="never" />
+</menu>

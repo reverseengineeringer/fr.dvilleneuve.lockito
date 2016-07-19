@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:lockito="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/menu_stop" android:enabled="false" android:id="@id/menuStop" android:title="@string/action_stop" lockito:showAsAction="always" />
+    <item android:icon="@drawable/menu_play" android:enabled="false" android:id="@id/menuPlay" android:title="@string/action_play" lockito:showAsAction="always" />
+    <item android:icon="@drawable/menu_pause" android:id="@id/menuPause" android:visible="false" android:title="@string/action_pause" lockito:showAsAction="always" />
+</menu>

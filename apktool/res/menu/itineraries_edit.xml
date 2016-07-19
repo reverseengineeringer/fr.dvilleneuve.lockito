@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:lockito="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@android:drawable/ic_menu_delete" android:id="@id/menuDelete" android:title="@string/action_delete" lockito:showAsAction="always" />
+    <item android:icon="@drawable/menu_copy" android:id="@id/menuDuplicate" android:title="@string/action_duplicate" lockito:showAsAction="always" />
+    <item android:icon="@android:drawable/ic_menu_edit" android:id="@id/menuRename" android:title="@string/action_rename" lockito:showAsAction="always" />
+</menu>

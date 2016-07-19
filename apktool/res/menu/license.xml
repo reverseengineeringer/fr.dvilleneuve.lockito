@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:lockito="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@android:drawable/ic_menu_view" android:id="@id/menuGoto" android:title="@string/action_see" lockito:showAsAction="always" />
+</menu>

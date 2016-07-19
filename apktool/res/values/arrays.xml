@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="prefs_general_unitSystem_entries">
+        <item>Metric system (m and km/h)</item>
+        <item>Imperial system (mi and mph)</item>
+    </string-array>
+    <string-array name="prefs_itineraries_order_entries">
+        <item>Last created first</item>
+        <item>Last updated first</item>
+        <item>Most played first</item>
+    </string-array>
+    <string-array name="prefs_general_unitSystem_entryValues">
+        <item>METRIC</item>
+        <item>IMPERIAL</item>
+    </string-array>
+    <string-array name="prefs_itineraries_order_entryValues">
+        <item>LAST_CREATED_FIRST</item>
+        <item>LAST_UPDATED_FIRST</item>
+        <item>MOST_PLAYED_FIRST</item>
+    </string-array>
+</resources>

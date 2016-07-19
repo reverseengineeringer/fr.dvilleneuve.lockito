@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/background_color" android:layout_width="fill_parent" android:layout_height="fill_parent" xmlns:ads="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListView android:id="@id/listView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:divider="@android:color/transparent" android:choiceMode="singleChoice" android:layout_above="@id/adView" />
+    <TextView android:textSize="18.0sp" android:gravity="center" android:id="@id/emptyView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/activity_itineraries_emptyList_message" android:layout_above="@id/adView" />
+    <com.google.android.gms.ads.AdView android:id="@id/adView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" ads:adSize="SMART_BANNER" ads:adUnitId="@string/admob_itineraries_banner_id" />
+</RelativeLayout>

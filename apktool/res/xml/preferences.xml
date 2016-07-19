@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/prefs_general">
+        <ListPreference android:entries="@array/prefs_general_unitSystem_entries" android:title="@string/prefs_general_unitSystem_title" android:key="@string/prefs_general_unitSystem_key" android:summary="@string/prefs_general_unitSystem_summary" android:defaultValue="@string/prefs_general_unitSystem_defaultValue" android:entryValues="@array/prefs_general_unitSystem_entryValues" />
+        <fr.dvilleneuve.lockito.ui.component.DelayPreference android:title="@string/prefs_general_locationsDelay_title" android:key="@string/prefs_general_locationsDelay_key" android:summary="@string/prefs_general_locationsDelay_summary" android:defaultValue="@integer/prefs_general_locationsDelay_defaultValue" android:dialogTitle="@string/prefs_general_locationsDelay_dialogMessage" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/prefs_itineraries">
+        <CheckBoxPreference android:title="@string/prefs_itineraries_showThumbnails_title" android:key="@string/prefs_itineraries_showThumbnails_key" android:summary="@string/prefs_itineraries_showThumbnails_summary" android:defaultValue="@bool/prefs_itineraries_showThumbnails_defaultValue" />
+        <ListPreference android:entries="@array/prefs_itineraries_order_entries" android:title="@string/prefs_itineraries_order_title" android:key="@string/prefs_itineraries_order_key" android:summary="@string/prefs_itineraries_order_summary" android:defaultValue="@string/prefs_itineraries_order_defaultValue" android:entryValues="@array/prefs_itineraries_order_entryValues" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/prefs_itinerary">
+        <CheckBoxPreference android:title="@string/prefs_itinerary_vibrateOnMarkerUpdate_title" android:key="@string/prefs_itinerary_vibrateOnMarkerUpdate_key" android:summary="@string/prefs_itinerary_vibrateOnMarkerUpdate_summary" android:defaultValue="@bool/prefs_itinerary_vibrateOnMarkerUpdate_defaultValue" />
+        <CheckBoxPreference android:title="@string/prefs_itinerary_notifyUnsaved_title" android:key="@string/prefs_itinerary_notifyUnsaved_key" android:summary="@string/prefs_itinerary_notifyUnsaved_summary" android:defaultValue="@bool/prefs_itinerary_notifyUnsaved_defaultValue" />
+        <CheckBoxPreference android:title="@string/prefs_itinerary_stopWhenFinish_title" android:key="@string/prefs_itinerary_stopWhenFinish_key" android:summary="@string/prefs_itinerary_stopWhenFinish_summary" android:defaultValue="@bool/prefs_itinerary_stopWhenFinish_defaultValue" />
+        <CheckBoxPreference android:title="@string/prefs_itinerary_forceSimulationRunning_title" android:key="@string/prefs_itinerary_forceSimulationRunning_key" android:summary="@string/prefs_itinerary_forceSimulationRunning_summary" android:defaultValue="@bool/prefs_itinerary_forceSimulationRunning_defaultValue" />
+    </PreferenceCategory>
+</PreferenceScreen>
